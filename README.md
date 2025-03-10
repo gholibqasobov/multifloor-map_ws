@@ -6,13 +6,13 @@
 
 2. **Build the packages**:
    ```bash
-      colcon build --symlink-install
-      ```
+   colcon build --symlink-install
+   ```
 
 3. **In one terminal open rviz2, add map and assign topic /map. In another terminal run the following command:**:
    ```bash
-        ros2 run map_provider swtich_map 1
-      ```
+   ros2 run map_provider swtich_map 1
+   ```
 
 Number 1 here means floor number 1. Save the maps in this structure:
    ```bash
