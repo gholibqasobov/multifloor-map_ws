@@ -4,12 +4,20 @@
    git clone https://github.com/gholibqasobov/multifloor-map_ws.git
    ```
 
-2. **Build the packages**:
+2. Navigate to the multifloor-map_ws repository and install necessary dependencies:
+   ```bash
+   rosdep install --from-paths src --ignore-src -r -y   
+   ```
+3. **Build the packages**:
    ```bash
    colcon build --symlink-install
    ```
+4. Open rviz and add map, add /map as topic
+   ```bash
+   ros2 run rviz2 rviz2
+   ```
 
-3. **In one terminal open rviz2, add map and assign topic /map. In another terminal run the following command:**:
+6. **In one terminal open rviz2, add map and assign topic /map. In another terminal run the following command:**:
    ```bash
    ros2 run map_provider swtich_map 1
    ```
