@@ -10,7 +10,7 @@ from std_srvs.srv import Empty
 class MapSwitcher(Node):
     def __init__(self):
         super().__init__('map_switcher')
-        self.declare_parameter('map_dir', '/home/qasob/multifloor-map_ws/src/map_provider/maps')  # Set path to maps folder
+        self.declare_parameter('map_dir', 'src/map_provider/maps')  # Set path to maps folder
 
     def switch_map(self, floor_number):
         map_dir = self.get_parameter('map_dir').get_parameter_value().string_value
